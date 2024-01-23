@@ -5,8 +5,11 @@ const port = process.env.PORT || 3000;
 const apiData = require('../CocktailData.json');
 app.use(cors());
 
+
+const SetData = JSON.stringify(apiData);
 app.get("/",(req,res)=>{
-    res.send(apiData);
+    
+    res.send(SetData);
 })
 
 
